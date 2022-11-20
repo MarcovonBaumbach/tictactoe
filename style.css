@@ -1,11 +1,28 @@
+table {
+    border-collapse: collapse;
+}
+
 tr {
     width: 399px;
+}
+
+.img-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 td {
     width: 133px;
     height: 133px;
-    border: 5px solid black;
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    cursor: pointer;
+}
+
+td:hover {
+    background-color: rgba(25, 221, 0, 0.1);
 }
 
 tr:first-child td {
@@ -22,4 +39,12 @@ tr:last-child td {
 
 tr td:last-child {
     border-right: 0;
+}
+
+table img {
+    position: absolute;
+}
+
+.d-none {
+    display: none;
 }
