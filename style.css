@@ -12,19 +12,23 @@ body {
 }
 
 .horizontal-line {
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 350px;
+    height: 30px;
+    background-image: url('./img/crimescene.png');
+    width: 370px;
     position: absolute;
     transform: scaleX(0.0);
     transition: transform 225ms ease-in-out;
+    z-index: 2;
 }
 
 .vertical-line {
-    height: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 470px;
+    height: 30px;
+    width: 500px;
+    background-image: url('./img/crimescene.png');
     position: absolute;
+    transform: scaleX(0.0);
+    transition: transform 225ms ease-in-out;
+    z-index: 2;
 }
 
 .game-over {
@@ -33,7 +37,7 @@ body {
     height: 450px;
     object-fit: cover;
     opacity: 0.95;
-    z-index: 2;
+    z-index: 3;
     animation: ZoomIn 500ms ease-in-out;
 }
 
@@ -42,6 +46,40 @@ body {
         transform: scale(0);
     }
     to {
+        transform: scale(1);
+    }
+}
+
+.restart-button {
+    position: absolute;
+    top: 320px;
+    height: 70px;
+    width: 200px;
+    font-size: 45px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    background-color: black;
+    border-width: 2px;
+    border-radius: 20px;
+    border-color: white;
+    border-style: double;
+    z-index: 4;
+    animation: popIn 500ms ease-in-out;
+}
+
+.restart-button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
         transform: scale(1);
     }
 }

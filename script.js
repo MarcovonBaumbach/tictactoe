@@ -20,6 +20,20 @@ function fillShape(id) {
     }
 }
 
+function restart() {
+    gameOver = false;
+    fields = [];
+    document.getElementById('img-over').classList.add('d-none');
+    document.getElementById('restart-btn').classList.add('d-none');
+    for (let i = 1; i < 9; i++) {
+        document.getElementById('line-' + i).style.transform = 'scaleX(0)';
+    }
+    for (let i = 1; i < 10; i++) {
+        document.getElementById('circle-' + i).classList.add('d-none');
+        document.getElementById('cross-' + i).classList.add('d-none');
+    }
+}
+
 function draw() {
     for (let i = 0; i < fields.length; i++) {
         if (fields[i] == 'circle') {
@@ -70,7 +84,7 @@ function checkForWin() {
 
     if (fields[2] == fields[4] && fields[4] == fields[6] && fields[4]) {
         winner = fields[4];
-        document.getElementById('line-8').style.transform = 'scaleX(1) rotate(135deg)';
+        document.getElementById('line-8').style.transform = 'scaleX(1) rotate(-45deg)';
     }
 
     if (fields[0] == fields[4] && fields[4] == fields[8] && fields[0]) {
@@ -79,11 +93,19 @@ function checkForWin() {
 
     }
 
+    if (fields[0] && fields[1] && fields[2] && fields[3] && fields[4] &&
+        fields[5] && fields[6] && fields[7] && fields[8]) {
+            winner = 'draw';
+        }
+
     if(winner) {
         console.log(winner);
         gameOver = true;
         setTimeout(function(){
             document.getElementById('img-over').classList.remove('d-none');
-        }, 500);
+        }, 2000);
+        setTimeout(function(){
+            document.getElementById('restart-btn').classList.remove('d-none');
+        }, 3500);
     }
 }
