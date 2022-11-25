@@ -103,9 +103,9 @@ function checkForWin() {
         gameOver = true;
         setTimeout(function(){
             document.getElementById('img-over').classList.remove('d-none');
-        }, 2000);
+        }, 1500);
         setTimeout(function(){
             document.getElementById('restart-btn').classList.remove('d-none');
-        }, 3500);
+        }, 2500);
     }
 }
