@@ -177,3 +177,76 @@ table img {
 .d-none {
     display: none;
 }
+
+@media (max-width: 500px) {
+    tr {
+        width: 300px;
+    }
+
+    td {
+        width: 100px;
+        height: 100px;
+    }
+
+    .game-over {
+        height: 350px;
+        width: 350px;
+    } 
+
+    .who-won {
+        font-size: 30px;
+    }
+    .display-panel {
+        font-size: 20px;
+        gap: 16px;
+    }
+    
+    .display-panel img {
+        height: 40px;
+    }
+
+    table img {
+        height: 64px;
+        width: auto;
+    }
+
+    table {
+        margin-top: 30px;
+    }
+
+    .horizontal-line {
+        width: 300px;
+    }
+    
+    .vertical-line {
+        width: 400px;
+    }
+
+    #line-2 {
+        margin-top: -40px;
+    }
+
+    #line-3 {
+        margin-top: -75px;
+    }
+
+    #line-4 {
+        margin-top: -50px;
+    }
+
+    #line-5 {
+        margin-top: -50px;
+    }
+
+    #line-6 {
+        margin-top: -50px;
+    }
+
+    #line-7 {
+        margin-top: -50px;
+    }
+
+    #line-8 {
+        margin-top: -50px;
+    }
+}
