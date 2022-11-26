@@ -5,6 +5,7 @@ body {
     align-items: center;
     height: 100vh;
     background: linear-gradient(rgb(242, 226, 226), rgb(44, 44, 53));
+    overflow: hidden;
 }
 
 .who-won {
