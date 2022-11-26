@@ -10,10 +10,11 @@
 </head>
 <body>
     <div class="display-panel">
-        <div id="player-1"><img src="./img/circle.png"> Player 1</div>
-        <div id="player-2" class="player-inactive"><img src="./img/x.png"> Player 2</div>
+        <div id="player-1"><img src="./img/circle.png"> Officer</div>
+        <div id="player-2" class="player-inactive"><img src="./img/x.png"> Criminal</div>
     </div>
     <div class="lines">
+    <div id="winning-message" class="who-won"></div>
     <button id="restart-btn" class="restart-button d-none" onclick="restart()">Restart</button>
     <video id="img-over" class="game-over d-none" autoplay muted><source src="./video/police.mp4" type="video/mp4"></video>
     <div id="line-1" class="horizontal-line" style="top: 230px;"></div>

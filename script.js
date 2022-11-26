@@ -25,6 +25,7 @@ function restart() {
     fields = [];
     document.getElementById('img-over').classList.add('d-none');
     document.getElementById('restart-btn').classList.add('d-none');
+    document.getElementById('winning-message').innerHTML = '';
     for (let i = 1; i < 9; i++) {
         document.getElementById('line-' + i).style.transform = 'scaleX(0)';
     }
@@ -104,6 +105,17 @@ function checkForWin() {
         setTimeout(function(){
             document.getElementById('img-over').classList.remove('d-none');
         }, 1500);
+        setTimeout(function(){
+            if(winner == 'circle'){
+                document.getElementById('winning-message').innerHTML = `The Criminal Is <br> Under Arrest!`;
+            }
+            if(winner == 'cross'){
+                document.getElementById('winning-message').innerHTML = `The Criminal <br> Escaped!`;
+            }
+            if(winner == 'draw'){
+                document.getElementById('winning-message').innerHTML = `DRAW!`;
+            }
+        }, 2000);
         setTimeout(function(){
             document.getElementById('restart-btn').classList.remove('d-none');
         }, 2500);
